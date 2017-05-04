@@ -1,0 +1,12 @@
+package com.java24hours;
+
+import java.util.*;
+
+class BetweenXandY {
+	public static void main (String[] arguments) {
+		// generates a random number between 0 and 50
+		System.out.println((int) (Math.random() * 50));
+		// generates a random number between 1000 and 9999
+		System.out.println((int) (Math.random() * (9999 - 1000)) + 10);
+	}
+}

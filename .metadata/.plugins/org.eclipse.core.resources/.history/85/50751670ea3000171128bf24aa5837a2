@@ -1,0 +1,10 @@
+package com.java24hours;
+
+import java.util.*;
+
+class BetweenXandY {
+	public static void main (String[] arguments) {
+		System.out.println((int) (Math.random() * 50));
+		System.out.println((int) (Math.random() * (9999 - 1000)) + 10);
+	}
+}
