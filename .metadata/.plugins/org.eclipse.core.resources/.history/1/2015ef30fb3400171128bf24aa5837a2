@@ -1,0 +1,10 @@
+package com.java24hours;
+
+public class If_statements {
+
+	public static void main(String[] args) {
+		long account = -17_000_000_000_000L;
+		System.out.println("Account overdrawn; you need a bailout");
+	}
+
+}
