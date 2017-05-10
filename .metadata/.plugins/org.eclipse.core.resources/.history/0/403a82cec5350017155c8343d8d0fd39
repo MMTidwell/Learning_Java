@@ -1,0 +1,24 @@
+package com.java24hours;
+
+public class Nines {
+	public static void main (String[] args) {
+		for (int dex = 0; dex <= 200; dex++) {
+			int multiple = 9 * dex;
+			System.out.print(multiple + " ");
+		}
+		System.out.println("");
+		System.out.println("");
+		whileLoop();
+	}
+	
+	
+	public static void whileLoop() {
+		int limit = 5;
+		int count = 1;
+		 while (count < limit) {
+			 System.out.println("Pork is not a verb!");
+			 count++;
+		 }
+		System.out.println("");
+	}
+}
