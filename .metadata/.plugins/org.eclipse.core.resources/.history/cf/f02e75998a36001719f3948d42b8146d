@@ -1,0 +1,8 @@
+package com.activities;
+
+public class Hour8 {
+	public static void main (String[] args) {
+		double max = 400;
+		
+	}
+}

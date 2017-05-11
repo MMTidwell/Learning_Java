@@ -1,0 +1,15 @@
+package com.activities;
+
+public class Hour8 {
+	public static void main (String[] args) {
+		double max = 400;
+		boolean count = 0;
+		while (count <= max) {
+			boolean total = count / 13;
+			if (total % 0) {
+				System.out.print(count + " ");
+			}
+			count++;
+		}
+	}
+}
