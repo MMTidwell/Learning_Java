@@ -15,14 +15,5 @@ public class SpaceRemover {
 			}
 		}
 		System.out.println();
-		multiArray();
-	}
-	
-	
-	public static void multiArray() {
-		boolean [] [] selectedPoint = new boolean [50] [50];
-		selectedPoint[4][13] = true;
-		selectedPoint[7][6] = true;
-		selectedPoint[11][22] = true;
 	}
 }

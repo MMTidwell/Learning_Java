@@ -1,0 +1,8 @@
+package com.java24hours;
+
+
+public class NameSorter {
+	public static void main (String[] args) {
+		
+	}
+}

@@ -24,5 +24,6 @@ public class SpaceRemover {
 		selectedPoint[4][13] = true;
 		selectedPoint[7][6] = true;
 		selectedPoint[11][22] = true;
+		System.out.println(selecedPoint);
 	}
 }
