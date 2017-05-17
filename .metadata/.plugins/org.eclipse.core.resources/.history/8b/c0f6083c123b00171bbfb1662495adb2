@@ -1,0 +1,15 @@
+package com.activities;
+
+public class Hour9 {
+	public static void main (String[] args) {
+		int[][] grades = {{100}, {90}, {80}};
+		for (int i = 0; i < grades.length; i++) {
+			int sum = 0;
+			for (int j = 0; j < grades[i].length; j++) {
+				sum += grades[i][j];
+				System.out.println(grades[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}

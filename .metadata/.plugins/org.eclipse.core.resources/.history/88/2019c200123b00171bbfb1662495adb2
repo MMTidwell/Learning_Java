@@ -1,0 +1,23 @@
+package com.activities;
+
+public class Hour9 {
+	public static void main (String[] args) {
+//		int[][] grades = {{100}, {90}, {80}};
+//		for (int i = 0; i < grades.length; i++) {
+//			for (int j = 0; j < grades[i].length; j++) {
+//				System.out.println(grades[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+	    int[][] temps = { {27,28,26,29,30}, {26,25,25,37,40} };
+
+	    for (int i=0; i<temps.length; i++) {
+
+	        for (int g=0; g< temps[i].length; g++) {
+
+	            System.out.print(temps[i][g] +"  ");
+	        }
+	        System.out.println();
+	    }
+	}
+}

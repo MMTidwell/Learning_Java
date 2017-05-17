@@ -1,0 +1,49 @@
+package com.activities;
+
+import java.util.stream.*;
+
+public class Hour9 {
+	public static void main (String[] args) {
+		public static void main(String[] args)
+	    {
+	        int[][] temperature = {{50,16},{47,-2},{65,35},{68,41},{73,50},
+	                                        {81,66},{93,73},{101,82},{90,75},
+	                                        {75,60},{67,53},{56,38}};
+	                                         
+	        printTemp(temperature);                     
+	                                     
+	        avgHighTemp(temperature);                           
+	    }//end main
+	     
+	    //method
+	    public static void printTemp(int[][] temp)
+	    {
+	        for (int high = 0; high < temp.length; high++)
+	        {
+	            for (int low = 0; low < temp[high].length; low++)
+	                System.out.printf("%7d", temp[high][low]);
+	                 
+	            System.out.println();
+	        }
+	    }
+	     
+	    public static int avgHighTemp(int[][] temp)
+	    {
+	        int sum =0;
+	        double avg= 0;
+	         
+	        for (int high = 0; high < temp[0].length; high++)
+	        {
+	            sum = 0;
+	            for (int low = 0; low < temp.length; low++)
+	                sum += temp[high][low];
+	 
+	        }
+	 
+	                          avg = sum / temp.length
+	        System.out.println("The average of the high temperature is " + String.format("%.2f", avg));
+	 
+	        return avg;
+	    }
+	       
+}
