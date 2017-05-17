@@ -67,6 +67,7 @@ public class Hour9 {
 		}
 		System.out.println("First 400 multiples of 13:");
 		// prints out the thirteens array
+		System.out.println(thirteens);
 		for (int i = 0; i < 400; i++) {
 			System.out.print(thirteens[i] + " ");
 		}

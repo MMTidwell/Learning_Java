@@ -5,7 +5,6 @@ INDEX VERSION 1.127+/Users/Mittsy/vagrant-lamp/sites/learning_java/.metadata/.pl
 546844249.index
 2585852906.index
 1911644267.index
-1740967614.index
 1271342938.index
 3353252374.index
 1733064856.index

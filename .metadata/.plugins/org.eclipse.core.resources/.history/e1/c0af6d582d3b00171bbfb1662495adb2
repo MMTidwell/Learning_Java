@@ -42,34 +42,16 @@ public class Hour9 {
 		}
 		// displays the average of all students
 		System.out.println("\nAverage grade of all students: " + gradeSum/36);
-		System.out.println();
 		mutliples();
 	} 
 	
 	
 	public static void mutliples() {
-		// initiates an array that can hold 400 elements
-		int[] thirteens =  new int[400];
-		// number of elements placed in the array
-		int numFound = 0;
-		// number that might be a multiple of 13
-		int candidate = 1;
-
-		// checks to make sure that the array is not 400+ elements or longer
-		while (numFound < 400) {
-			// checks if candidate number is % to 13
-			if (candidate % 13 == 0) {
-				// places the candidate number in the index based on the number of index found
-				thirteens[numFound] = candidate;
-				numFound++;
-			}
-			candidate++;
+		int[] multi = null;
+		for (int count = 0; count < 400; count += 13) {
+			count++;
 		}
-		System.out.println("First 400 multiples of 13:");
-		// prints out the thirteens array
-		for (int i = 0; i < 400; i++) {
-			System.out.print(thirteens[i] + " ");
-		}
+		System.out.println(count);
 	}
 }
 
