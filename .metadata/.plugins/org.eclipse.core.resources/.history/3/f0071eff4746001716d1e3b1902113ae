@@ -1,0 +1,7 @@
+package com.activities;
+
+public class DslModem2 extends Modem2{
+	public DslModem2() {
+		
+	}
+}

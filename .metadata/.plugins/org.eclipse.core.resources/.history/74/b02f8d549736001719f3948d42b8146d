@@ -1,9 +1,0 @@
-package com.java24hours;
-
-public class SpaceRemover {
-	public static void main(String[] args) {
-		String mostFamous = "Rudolph the Red-Nosed Reindeer";
-		char[] mfl = mostFamous.toCharArray();
-		System.out.println(mfl);
-	}
-}
