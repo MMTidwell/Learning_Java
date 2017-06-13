@@ -1,6 +1,6 @@
 package com.java24hours;
 
-// imports the superclass utilities, this will allow access to the Collections obj
+// imports the superclass utilities
 import java.util.*;
 
 public class StringLister {
