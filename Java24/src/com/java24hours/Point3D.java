@@ -22,7 +22,7 @@ public class Point3D extends Point {
 		super.move(x, y);
 	}
 	
-	// move an obj ju an amount of x and y values
+	// move an obj an amount of x and y values
 	public void translate (int x, int y, int z) {
 		this.z += z;
 		super.translate(x, y);
