@@ -1,0 +1,10 @@
+package com.treehouse;
+
+import java.io.Console;
+
+public class Java_basics {
+	public static void main (String[] args) {
+		Console console = System.console();
+		console.printf("Hello my name is Mitt");
+	}
+}

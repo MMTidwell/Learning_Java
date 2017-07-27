@@ -1,8 +1,0 @@
-package com.java24hours;
-
-public class Grade {
-	public static void main (String[] args) {
-		int [] avg; 
-		int [] grages = { [70,80,90], [90.90.90], [100,100,100] };
-	}
-}
