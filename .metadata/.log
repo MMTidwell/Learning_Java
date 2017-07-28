@@ -1981,3 +1981,6 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2017-07-28 16:26:30.351
+!MESSAGE DDMS files not found: /Users/Mittsy/Desktop/Eclipse.app/Contents/MacOS/platform-tools/adb /Users/Mittsy/Desktop/Eclipse.app/Contents/MacOS/platform-tools/hprof-conv /Users/Mittsy/Desktop/Eclipse.app/Contents/MacOS/tools/traceview 
