@@ -1,0 +1,11 @@
+package com.treehouse;
+
+public class Java_objects {
+	public static void main (String[] args) {
+		System.out.println("We are making a new PEZ Dispenser.");
+		Pez_Dispenser dispenser = new Pez_Dispenser();
+		System.out.printf("The dispenser is %s. %n", dispenser.characterName);
+		dispenser.characterName = "Darth Vader";
+		System.out.printf("The dispenser is %s. %n", dispenser.characterName);
+	}
+}

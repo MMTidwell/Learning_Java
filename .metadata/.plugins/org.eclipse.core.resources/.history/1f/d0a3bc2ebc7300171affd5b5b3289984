@@ -7,3 +7,7 @@ public class Java_basics {
 		System.out.println(first_name + " is learning how to do Java");
 	}
 }
+
+
+//Console.console = System.console();
+//String firstName = console.readLine("What is your name?  ")

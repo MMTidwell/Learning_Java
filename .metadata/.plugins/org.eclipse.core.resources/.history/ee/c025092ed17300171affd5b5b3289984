@@ -1,0 +1,10 @@
+package com.treehouse;
+
+public class Pez_Dispenser {
+	// if we set this variable to "private" then we can not change the value of the variable
+	private String characterName = "Yoda";
+	
+	public String getTheCharacterName() {
+		return characterName;
+	}
+}
