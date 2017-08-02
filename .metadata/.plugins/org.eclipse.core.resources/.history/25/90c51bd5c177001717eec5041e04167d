@@ -1,0 +1,28 @@
+//MAINTAINS THE LOGIC
+
+package com.treehouse;
+
+class game {
+	// define each string
+	private String answer;
+	private String hits;
+	private String misses;
+	
+	// constructor 
+	public game(String answer) {
+		this.answer = answer;
+		hits = "";
+		misses = "";
+	}
+	
+	// checks to see if the guess is in the answer
+	public boolean applyGuess(char letter) {
+		boolean isHit = answer.indexOf(letter) != -1;
+		if (isHit) {
+			hits += letter;
+		} else {
+			misses += letter;
+		}
+		return isHit;
+	}
+}

@@ -1,0 +1,5 @@
+package com.treehouse;
+
+public class hangman {
+	game game = new game("treehouse");
+}

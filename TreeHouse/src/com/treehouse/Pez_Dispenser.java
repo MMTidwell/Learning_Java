@@ -43,7 +43,7 @@ public class Pez_Dispenser {
 		}
 		return wasDispensed;
 	}
-	
+
 	public boolean isEmpty() {
 		return pezCount == 0; 
 	}

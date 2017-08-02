@@ -1,0 +1,24 @@
+//DEALS WITH THE IO
+
+package com.treehouse;
+
+import java.util.Scanner;
+
+public class prompter {
+	// creates new game object
+	private game game;
+	
+	// constructor 
+	public prompter(game game) {
+		this.game = game;
+	}
+	
+	// prompts user for guess by using the Scanner method
+	public boolean promptForGuess() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a letter");
+		String guessInput = scanner.nextLine();
+		char guess = guessInput.charAt(0);
+		return game.applyGuess(guess);
+	}
+}
