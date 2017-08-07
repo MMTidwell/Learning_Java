@@ -7,7 +7,7 @@ public class hangman {
 		if (args.length == 0) {
 			System.out.println("Usage:   Java Hangman <answer>");
 			System.out.println("answer is required");
-			System.out.println("Change the args in Run Configurations");
+			System.out.println("Change the args in Run Configerations");
 			System.exit(1);
 		}
 		
@@ -24,7 +24,6 @@ public class hangman {
 		}
 		prompter.displayOutcome();
 		
-		
 // Psudocode 		
 		// method called from the prompter class to have the user guess
 //		boolean isHit = prompter.promptForGuess();
@@ -38,23 +37,3 @@ public class hangman {
 //		prompter.displayProgress();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
