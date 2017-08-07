@@ -17,14 +17,25 @@ public class prompter {
 	public boolean promptForGuess() {
 		// calls the scanner method from util
 		Scanner scanner = new Scanner(System.in);
-		// asks for input from the user
-		System.out.println("Enter a letter");
-		// gets the input from the user
-		String guessInput = scanner.nextLine();
-		// checks to see if it is a letter
-		char guess = guessInput.charAt(0);
-		// returns the guess
-		return game.applyGuess(guess);
+		boolean isHit = false;
+		boolean isAcceptable = false;
+		
+		// 
+		do {
+			// asks for input from the user
+			System.out.println("Enter a letter");
+			// gets the input from the user
+			String guessInput = scanner.nextLine();
+			
+			// returns the guess
+			try {
+				isHit = game.applyGuess(guessInput);
+				isAcceptable = true;
+			} catch (IllegalArgumentException iae) {
+				System.out.printf("%s.   Please try agian.   %n", iae.getMessage());
+			}
+		} while (! isAcceptable);
+		return isHit;
 	}
 	
 	// shows the user how many tires they have left, by using methods from the game class	
@@ -32,6 +43,19 @@ public class prompter {
 		System.out.printf("You have %d tries left to solve: %s%n", 
 						   game.getRemainingTries(), 
 						   game.getCurrentProgress());
+	}
+	
+	// results of the game
+	public void displayOutcome() {
+		// win
+		if (game.isWon()) {
+			System.out.printf("You won with %s tries remaining. The word was %s!", 
+								game.getRemainingTries(),
+								game.getAnswer());
+		// loss
+		} else {
+			System.out.printf("Bummer the word was %s.   :( %n", game.getAnswer());
+		}
 	}
 }
 
