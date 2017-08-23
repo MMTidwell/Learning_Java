@@ -1,7 +1,0 @@
-//MAIN FILE AND USES THE PROMPTER AND GAME FILES
-
-package com.treehouse;
-
-public class hangman {
-	game game = new game("treehouse");
-}

@@ -1,9 +1,0 @@
-package com.treehouse;
-
-class game {
-	private String answer;
-	
-	public game(String answer) {
-		this.answer = answer;
-	}
-}

@@ -1,7 +1,0 @@
-//DEALS WITH THE IO
-
-package com.treehouse;
-
-public class prompter {
-
-}
