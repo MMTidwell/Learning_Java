@@ -1,0 +1,20 @@
+package com.teamtreehouse;
+
+import java.io.*;
+
+public class Treets {
+	public static void save (Treet[] treets) {
+		try (
+			// creates a file     .ser means serialize 
+			FileOutputStream fos = new FileOutputStream("treets.ser");
+			// used to serialize the string
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+		) {
+			// takes the representation in memory and converts it to binary using the writeObject
+			oos.writeObject(treets);
+		} catch (IOException ioe) {
+			System.out.println("Problem saving Treets.");
+			ioe.printStackTrace();
+		}
+	}
+}
