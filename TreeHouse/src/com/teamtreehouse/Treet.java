@@ -4,7 +4,7 @@ package com.teamtreehouse;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Treet implements Comparable, Serializable {
+public class Treet implements Comparable<Treet>, Serializable {
 	// Stabilizes the serialization
 	private static final long serialVersionUID = 7146681148113043748L;
 	// Member variables
@@ -29,9 +29,7 @@ public class Treet implements Comparable, Serializable {
 	
 	// compares the treets by mCreationDate and mDescription
 	@Override
-	public int compareTo(Object obj) {
-		// cast to other
-		Treet other = (Treet) obj;
+	public int compareTo(Treet other) {
 		// check it is == to other
 		if (equals (other)) {
 			return 0;

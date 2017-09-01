@@ -1,0 +1,14 @@
+package com.treehouse;
+
+public class Example {
+	public static void main (String[] args) {
+		System.out.println("We are making a new PEZ Dispenser.");
+		
+		// since pez_dispenser is in the same package we do not need to import it
+		Pez_Dispenser dispenser = new Pez_Dispenser();
+		// Reassigns the characterName
+		// dispenser.characterName = ("Darth Vader");
+		
+		System.out.printf("The dispensers name is %s. %n", dispenser.getCharacterName());
+	}
+}

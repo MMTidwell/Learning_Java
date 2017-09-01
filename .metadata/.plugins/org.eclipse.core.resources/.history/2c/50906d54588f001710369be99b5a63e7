@@ -1,0 +1,17 @@
+package com.treehouse;
+
+public class Example {
+	public static void main (String[] args) {
+		System.out.println("We are making a new PEZ Dispenser.");
+		
+		// since pez_dispenser is in the same package we do not need to import it
+		Pez_Dispenser dispenser = new Pez_Dispenser("Donatello");
+		// Reassigns the characterName
+		// dispenser.characterName = ("Darth Vader"); // no longer works due to private call
+		
+		System.out.printf("The dispensers name is %s. %n", dispenser.getCharacterName());
+		
+		String before = dispenser.swapHead("Darth Vader");
+		System.out.printf("It was %s but Chris changed it to %s %n.", before, dispenser.getCharacterName);
+	}
+}
