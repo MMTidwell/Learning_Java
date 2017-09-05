@@ -1,0 +1,11 @@
+package com.treehouse;
+
+// Game class is used for game logic
+public class Game {
+	private String answer;
+	
+	// constructor
+	public Game(String answer) {
+		this.answer = answer;
+	}
+}
