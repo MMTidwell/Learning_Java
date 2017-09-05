@@ -48,7 +48,6 @@ public class Example {
 			System.out.println("Chomp CHOMP!!");
 		} 
 		
-		// try catch block for when there are too many pez to fit
 		try {
 			dispenser.fill(300);
 			System.out.println("This will never print due to IllegalArgumentException in "
@@ -56,7 +55,6 @@ public class Example {
 		} catch (IllegalArgumentException iae) {
 			System.out.println("That is a lot of pez! We can  not fit it all in!");
 			System.out.printf("There error was: "
-					+ ""
 					+ " %s", iae.getMessage());
 		}
 		

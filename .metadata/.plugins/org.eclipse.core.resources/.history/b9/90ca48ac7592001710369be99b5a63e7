@@ -48,7 +48,7 @@ public class Example {
 			System.out.println("Chomp CHOMP!!");
 		} 
 		
-		// try catch block for when there are too many pez to fit
+		// try catch blocks
 		try {
 			dispenser.fill(300);
 			System.out.println("This will never print due to IllegalArgumentException in "
