@@ -16,11 +16,6 @@ public class Game {
 	
 	// checks to see if guessed letter is in the answer
 	public boolean applyGuess(char letter) {
-		// Checks to see if the guess has already been guessed
-		if (misses.indexOf(letter) != -1 || hits.indexOf(letter) != -1) {
-			throw new IllegalArgumentException(letter +  " has already been guessed.");
-		}
-		
 		// boolean created to use in if statment bellow
 		boolean isHit = answer.indexOf(letter) != -1;
 		if (isHit) {

@@ -7,7 +7,7 @@ public class Hangman {
 		Game game = new Game("treehouse");
 		Prompter prompter = new Prompter(game);
 		
-		while (game.getRemainingTries() > 0) {
+		while (game.getRemainingTries > 0) {
 			// uses the disolayProgress method from the Prompter class
 			prompter.displayProgress();
 			prompter.promptForGuess();

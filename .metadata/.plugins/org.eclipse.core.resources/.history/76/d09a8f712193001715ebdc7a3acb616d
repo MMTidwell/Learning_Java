@@ -2,7 +2,6 @@ package com.treehouse;
 
 // Game Class is used for game logic
 public class Game {
-	public static final int MAX_MISSES = 7;
 	private String answer;
 	private String hits;
 	private String misses;
@@ -12,15 +11,11 @@ public class Game {
 		this.answer = answer;
 		hits = "";
 		misses = "";
+		public static final int MAX_MISSES = 7;
 	}
 	
 	// checks to see if guessed letter is in the answer
 	public boolean applyGuess(char letter) {
-		// Checks to see if the guess has already been guessed
-		if (misses.indexOf(letter) != -1 || hits.indexOf(letter) != -1) {
-			throw new IllegalArgumentException(letter +  " has already been guessed.");
-		}
-		
 		// boolean created to use in if statment bellow
 		boolean isHit = answer.indexOf(letter) != -1;
 		if (isHit) {
@@ -42,11 +37,6 @@ public class Game {
 			progress += display;
 		}
 		return progress;
-	}
-	
-	// How many tries are left??
-	public int getRemainingTries() {
-		return MAX_MISSES - misses.length();
 	}
 }
 
