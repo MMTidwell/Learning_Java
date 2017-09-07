@@ -1,0 +1,17 @@
+package com.teamtreehouse;
+
+import java.io.*;
+
+public class Treets {
+	public static void save(Treet[] treets) {
+		// try/catch block
+		try (FileOutputStream fos = new FileOutputStream("treets.ser");
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+		) {
+			oos.writeObject(treets);
+		} catch(IOException ioe) {
+			System.out.println("We had problems saveing Treets");
+			ioe.printStackTrace();
+		}	
+	}
+}
