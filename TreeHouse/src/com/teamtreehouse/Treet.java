@@ -1,65 +1,46 @@
+/*
+ * We are building a tweet counter. Here are some things that we will need to consider
+ * 		- Author
+ * 		- When it was posted
+ * 		- Description
+ */
+
 package com.teamtreehouse;
 
-// process of translating objects into a format that can be stored and recreated later in the same or different environment
-import java.io.Serializable;
 import java.util.Date;
 
-public class Treet implements Comparable<Treet>, Serializable {
-	// Stabilizes the serialization
-	private static final long serialVersionUID = 7146681148113043748L;
-	// Member variables
-	private boolean mBreakIt = true;
+public class Treet {
+	// declaring the private variables that are listed above
 	private String mAuthor;
-	private String mDescription;
+	private String mDiscription;
 	private Date mCreationDate;
 	
-	// Constructor
-	public Treet(String author, String description, Date creationDate) {
+	// constructor
+	public Treet(String author, String discription, Date creationDate) {
 		mAuthor = author;
-		mDescription = description;
+		mDiscription = discription;
 		mCreationDate = creationDate;
 	}
 	
-	// Override forces the method to be used, else a error occurs
+	// Override will tell the compiler that we are intending to 
+		// override the method
 	@Override
+	// returns a string representation of the obj
 	public String toString() {
-		return String.format("Treet:  \"%s\" by %s on %s",
-				mDescription, mAuthor, mCreationDate);
+		return "Treet:  \"" + mDiscription + "\" - @" + mAuthor + "\n\n";
 	}
 	
-	// compares the treets by mCreationDate and mDescription
-	@Override
-	public int compareTo(Treet other) {
-		// check it is == to other
-		if (equals (other)) {
-			return 0;
-		}
-		
-		// checks the creation date
-		int dateCmp = mCreationDate.compareTo(other.mCreationDate);
-		if (dateCmp == 0) {
-			return mDescription.compareTo(other.mDescription);
-		}
-		return dateCmp;
-	}
-	
-	// Getter methods to get the info needed
+	// creating the getters for author, description, and creationDate
+	// we are not creating setters with these in order to make them immutable
 	public String getAuthor() {
 		return mAuthor;
 	}
 	
-	// gets the description string
-	public String getDescription() {
-		return mDescription;
+	public String getDiscription() {
+		return mDiscription;
 	}
 	
-	// gets the creation date
-	public Date getCreationDate() {
+	public Date getDate() {
 		return mCreationDate;
-	}
-	
-	// takes the string and splits it based on the spaces and special characters
-	public String[] getWords() {
-		return mDescription.toLowerCase().split("[^\\w#@']");
 	}
 }

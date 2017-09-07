@@ -1,0 +1,16 @@
+/*
+ * We are building a tweet counter. Here are some things that we will need to consider
+ * 		- Author
+ * 		- When it was posted
+ * 		- Description
+ */
+
+package com.teamtreehouse;
+
+public class Example {
+	// first method ran
+	public static void main(String[] args) {
+		Treet treet = new Treet();
+		System.out.printf("This is a new Treet: %s%n", treet);
+	}
+}
