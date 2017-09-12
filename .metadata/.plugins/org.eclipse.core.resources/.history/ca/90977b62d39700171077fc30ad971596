@@ -13,7 +13,6 @@ public class Song {
 		mVideoUrl = videoUrl;
 	}
 	
-	// getters
 	public String getArtist() {
 		return mArtist;
 	}
@@ -22,12 +21,7 @@ public class Song {
 		return mTitle;
 	}
 	
-	public String getVideoUrl() {
+	public String getVideo() {
 		return mVideoUrl;
-	}
-	
-	@Override
-	public String toString() {
-		return String.format("Song: %s by %s.%n", mTitle, mArtist);
 	}
 }

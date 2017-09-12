@@ -1,0 +1,7 @@
+package Model;
+
+public class Karaoke {
+	public static void main(String[] args) {
+		Song song = new Song("Deftones", "Passenger", "https://www.youtube.com/watch?v=KS0wIduy8yY");
+	}
+}

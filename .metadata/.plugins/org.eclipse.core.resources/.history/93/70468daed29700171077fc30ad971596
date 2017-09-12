@@ -1,0 +1,15 @@
+package Model;
+
+public class Song {
+	// first step of the model, we are finding what will be needed for each song
+	private String mArtist;
+	private String mTitle;
+	private String mVideoUrl;
+	
+	// constructor 
+	public Song(String artist, String title, String videoUrl) {
+		artist = mArtist;
+		title = mTitle;
+		videoUrl = mVideoUrl;
+	}
+}
