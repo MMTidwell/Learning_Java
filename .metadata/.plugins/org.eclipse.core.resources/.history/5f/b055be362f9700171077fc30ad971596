@@ -1,0 +1,80 @@
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+// we are importing the package because it is in another package
+import com.teamtreehouse.Treet;
+import com.teamtreehouse.Treets;
+
+
+public class Example {
+//	// first method ran
+//	public static void main(String[] args) {
+//		// creating new Treet obj and passing in params
+//		Treet treet = new Treet("Craig", 
+//				"Want to be famous? Simply tweet about Java and use the hashtag #treet."
+//				+ " I'll use your tweet int he new @treehouse course about data "
+//				+ "structures.",
+//				new Date(1421871332000L));
+//		Treet secondTreet = new Treet("jjourneytocode", 
+//				"@treehouse make learning Java soooo fun! #treet",
+//				new Date(1421878767000L));
+//		
+//		System.out.printf("This is a new Treet: %s\n", treet);
+//		
+//		System.out.println("The words are: ");
+//		// each time through the loop, it will take a word and place it into the word
+//			// variable. Then we are going to print out each word.
+//		for (String word : treet.getWords()) {
+//			System.out.println(word);
+//		}
+//		
+//		// creates trees obj holding both treet and secondTreet obj
+//		Treet[] treets = {treet, secondTreet};
+//		// sorts the treets obj
+//		Arrays.sort(treets);
+//		for (Treet exampleTreet : treets) {
+//			System.out.println(exampleTreet);
+//		}
+//		
+//		// used for Serializable
+//		Treets.save(treets);
+//		Treet[] reloadedTreets = Treets.load();
+//		for (Treet reloaded : reloadedTreets) {
+//			System.out.println(reloaded);
+//		}
+//	}
+	
+	// THIS METHOD WILL ONLY RETURN 1 HASHTAG AS IT IS ONLY LOOKING AT THE FIRST TWEET
+	public static void main(String[] args) {
+		// Treets are loading from twitter
+		Treet[] treets = Treets.load();
+		System.out.printf("There are %d treets.%n", treets.length);
+		// // NO LONGER NEEDED SINCE WE HAVE THE TWEET LOADING AUTOMATICALLY
+//		// This is the original treets variable
+//		Treet originalTreet = treets[0];
+//		System.out.println("Hashtas:");
+//		// Looping through originalTreet using the .getHashTags method from Treet class
+//		for (String hashtag : originalTreet.getHashTags()) {
+//			System.out.println(hashtag);
+//		}
+		Set<String> allHashTags = new HashSet<String>();
+		Set<String> allMentions = new HashSet<String>();
+ 		for (Treet treet : treets) {
+			allHashTags.addAll(treet.getHashTags());
+			allMentions.allAll(treet.getHashTags());
+		}
+		System.out.printf("Hash tags: %s %n", allHashTags);
+	}
+}
+
+
+
+
+
+
+
+
+
+

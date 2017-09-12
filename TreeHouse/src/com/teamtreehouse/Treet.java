@@ -10,12 +10,17 @@
 
 package com.teamtreehouse;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.io.Serializable;
 
-// implements Compareable - make it to where you can compare 2 or more objects
-// Serializable - taks a obj and storing its rep in a state that can be loaded
-public class Treet implements Comparable, Serializable {
+
+// implements Comparable - make it to where you can compare 2 or more objects
+// Serializable - takes a obj and storing its rep in a state that can be loaded
+// <Treet> - is used to specify what will be compared 
+public class Treet implements Comparable<Treet>, Serializable {
 	// declaring the private variables that are listed above
 	private String mAuthor;
 	private String mDescription;
@@ -38,8 +43,7 @@ public class Treet implements Comparable, Serializable {
 	}
 	
 	@Override
-	public int compareTo(Object obj) {
-		Treet other = (Treet) obj;
+	public int compareTo(Treet other) {
 		if (equals(other)) {
 			return 0;
 		}
@@ -66,9 +70,30 @@ public class Treet implements Comparable, Serializable {
 	
 	// takes the string mDiscription, changes to lower case, then splits it based 
 		// on the regex passed in
-	public String[] getWords() {
-		return mDescription.toLowerCase().split("[^\\w#@']+");
+	public List<String> getWords() {
+		String[] words = mDescription.toLowerCase().split("[^\\w#@']+");
+		return Arrays.asList(words);
 	}
+	
+	// Using the helper method bellow to create list
+	public List<String> getHashTags() {
+		return getWordsPrefixedWith("#");
+	}
+	
+	public List<String> getMentions() {
+		return getWordsPrefixedWith("@");
+	}
+	
+	// Creating a list and storing it into results ArrayList
+	private List<String> getWordsPrefixedWith(String prefix) {
+		List<String> results = new ArrayList<String>();
+		for (String word : getWords()) {
+			if (word.startsWith(prefix)) {
+				results.add(word);
+			}
+		}
+		return results;
+	} 
 }
 
 

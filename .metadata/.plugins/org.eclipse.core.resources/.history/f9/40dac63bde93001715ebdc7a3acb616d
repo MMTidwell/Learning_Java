@@ -1,9 +1,0 @@
-package com.teamtreehouse;
-
-import java.util.Date;
-
-public class Treet {
-	String author;
-	String discription;
-	Date date;
-}
