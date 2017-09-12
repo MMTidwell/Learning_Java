@@ -10,7 +10,8 @@ public class Karaoke {
 		// adds the song to the songBook
 //		songBook.addSong(song);
 //		System.out.printf("There are %d songs.%n", songBook.getSongCount());
-		KaraokeMachine machine = new KaraokeMachine(songBook);
+		KaraokeMachine machine = ne KaraokeMachine(songBook);
 		machine.run();
+		
 	}
 }

@@ -1,11 +1,5 @@
 /*
  * Creates the UI for Karaoke
- * 
- * Here is a list of videos:
- * Deftones Passenger - https://www.youtube.com/watch?v=Um7ySTHsCf0
- * Third Eye Blind - Mine - https://www.youtube.com/watch?v=HdcX5AwAEK8
- * A Perfect Circle - Weak and Powerless - https://www.youtube.com/watch?v=s-GsLh6dazI
- * Puscifer - Conditions of my Parole - https://www.youtube.com/watch?v=7E-_J5WWkoc
  */
 package Model;
 
@@ -22,7 +16,7 @@ import java.util.Queue;
 public class KaraokeMachine {	
 	private SongBook mSongBook;
 	private BufferedReader mReader;
-	private Queue<Song> mSongQueue;
+	private Queue mSongQueue;
 	private Map<String, String> mMenu;
 
 	// constructor 
@@ -32,10 +26,8 @@ public class KaraokeMachine {
 		mReader = new BufferedReader(new InputStreamReader(System.in));
 		mSongQueue = new ArrayDeque<Song>();
 		mMenu = new HashMap<String, String>();
-		
 		// adds to the mMenu variable
 		mMenu.put("add", "Add a new song to the song book.");
-		mMenu.put("play", "Play for next song.");
 		mMenu.put("choose", "Choose a song to sing!");
 		mMenu.put("quit", "Give up. Exit the program.");
 	}
@@ -57,9 +49,6 @@ public class KaraokeMachine {
 						Song artistSong = promptSongForArtist(artist);
 						mSongQueue.add(artistSong);
 						System.out.printf("You chose: %s%n", artistSong);
-						break;
-					case "play" :
-						playNext();
 						break;
 					case "quit" :
 						System.out.println("Thanks for playing!");

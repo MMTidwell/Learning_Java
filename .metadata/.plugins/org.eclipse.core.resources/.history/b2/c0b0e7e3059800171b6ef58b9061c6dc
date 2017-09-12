@@ -1,11 +1,5 @@
 /*
  * Creates the UI for Karaoke
- * 
- * Here is a list of videos:
- * Deftones Passenger - https://www.youtube.com/watch?v=Um7ySTHsCf0
- * Third Eye Blind - Mine - https://www.youtube.com/watch?v=HdcX5AwAEK8
- * A Perfect Circle - Weak and Powerless - https://www.youtube.com/watch?v=s-GsLh6dazI
- * Puscifer - Conditions of my Parole - https://www.youtube.com/watch?v=7E-_J5WWkoc
  */
 package Model;
 

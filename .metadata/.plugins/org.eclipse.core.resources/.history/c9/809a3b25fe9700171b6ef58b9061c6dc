@@ -43,11 +43,6 @@ public class SongBook {
 	public Set<String> getArtist() {
 		return byArtist().keySet();
 	}
-	
-	// exposes our songs 
-	public List<Song> getSongsForArtist(String artistName) {
-		return byArtist().get(artistName);
-	}
 }
 
 

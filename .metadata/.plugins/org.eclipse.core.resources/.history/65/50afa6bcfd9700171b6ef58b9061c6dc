@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class SongBook {
 	// Song is not part of the imported util package, but actually the Song class
@@ -37,16 +36,6 @@ public class SongBook {
 			artistSongs.add(song);
 		}
 		return byArtist;
-	}
-	
-	// exposes our artist
-	public Set<String> getArtist() {
-		return byArtist().keySet();
-	}
-	
-	// exposes our songs 
-	public List<Song> getSongsForArtist(String artistName) {
-		return byArtist().get(artistName);
 	}
 }
 
