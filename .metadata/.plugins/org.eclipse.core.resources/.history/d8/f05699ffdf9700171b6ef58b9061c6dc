@@ -1,0 +1,37 @@
+/*
+ * Creates the UI for Karaoke
+ */
+package Model;
+
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class KaraokeMachine {	
+	private SongBook mSongBook;
+	private BufferedReader mReader;
+	private Map<String, String> mMenu;
+
+	// constructor 
+	public KaraokeMachine(SongBook songBook) {
+		mSongBook = songBook;
+		// this is going to read from the console
+		mReader = new BufferedReader(new InputStreamReader(System.in));
+		mMenu = new HashMap<String, String>();
+		// adds to the mMenu variable
+		mMenu.put("add", "Add a new song to the song book.");
+		mMenu.put("quit", "Give up. Exit the program.");
+	}
+	
+	private String promptAction() {
+		System.out.println("There are %d songs available. %n Your options are: %n",
+				mSongBook.getSongCount());
+		for (Map.Entry<String, String> option : mMenu.entrySet()) {
+			System.out.printf("%s - %s %n",
+					option.getKey(),
+					option.getValue());
+		}
+	}
+}
