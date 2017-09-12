@@ -1,9 +1,0 @@
-package com.teamtreehouse;
-
-public class Example {
-	// first method ran
-	public static void main(String[] args) {
-		Treet treet = new Treet();
-		System.out.printf("This is a new Treet: %s%n", treet);
-	}
-}

@@ -44,7 +44,7 @@ public class Contact {
 	 */
 	public String getContactInfo(String methodName) {
 		// FIXME: returnt he value for the passed in *methodName*
-		return mContactMethods.get(methodName);
+		return mContatctMethods.get(methodName);
 	}
 	
 	public String getFirstName() {

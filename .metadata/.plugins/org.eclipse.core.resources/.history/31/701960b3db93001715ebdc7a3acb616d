@@ -1,8 +1,0 @@
-package com.teamtreehouse;
-
-public class Example {
-	// first method ran
-	public static void main(String[] args) {
-		
-	}
-}
