@@ -1,0 +1,40 @@
+/*
+ * This will return if a zip code is valid based on the user input
+ * Zip code must be 5 digets long and contain no letters
+ */
+
+package com.treehouse;
+
+import java.io.Console;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Regex {
+	public static void main (String[] args) {
+		Console console = System.console();
+		String zipCode = console.readLine("Enter your zipcode:  ");
+		// \\d{5} - checks that the zip code entered is 5 digest and does not
+			// contain any letters
+		// ^\\d{5}(-\\d{4})?$ - checks that the zip code is 5 digest, doesnt 
+			// contain any letters and can contain "-" followed by 4 more digets 
+		if (zipCode.matches("^\\d{5}(-\\d{4})?$")) {
+			System.out.printf("%s is a valid zip code%n", zipCode);
+		} else {
+			System.out.printf("%s is not a valid zip code%n", zipCode);
+		}
+	
+		String skills = "JavaScript, HTML, CSS, and Java";
+		for (String skill : skills.split(("\\W+(and||W+)?"))) {
+			System.out.printf("Skill:  %s%n", skill);
+		}
+		
+		String script = "Procatstination is surely not the desination, should we talk about shiny things?";
+		Pattern pattern = Pattern.compile("(\\W*(sh|ti|su)\\W*)");
+		Matcher matcher = pattern.matcher(script);
+		while (matcher.find()) {
+			System.out.printf("%s is a shushy word because of %s.%n", matcher.group(1),
+					matcher.group(2));
+		}
+		
+	}
+}
