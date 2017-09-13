@@ -1,0 +1,71 @@
+package Model;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+public class SongBook {
+	// Song is not part of the imported util package, but actually the Song class
+	private List<Song> mSongs;
+	
+	// Constructor
+	public SongBook() {
+		mSongs = new ArrayList<Song>();
+	}
+	
+	// writes out song using a custom serialization
+	// This will export our SongBook
+	
+	
+	// adds the song to mSongs
+	public void addSong(Song song) {
+		mSongs.add(song);
+	}
+	
+	// exposes what is in the mSongs list, this will return the number of songs
+	public int getSongCount() {
+		return mSongs.size();
+	}
+	
+	// gets artist and song
+	private Map<String, List<Song>> byArtist() {
+		Map<String, List<Song>> byArtist = new HashMap<>();
+		for (Song song:mSongs) {
+			List<Song> artistSongs = byArtist.get(song.getArtist());
+			if (artistSongs == null) {
+				artistSongs = new ArrayList<>();
+				byArtist.put(song.getArtist(), artistSongs);
+			}
+			artistSongs.add(song);
+		}
+		return byArtist;
+	}
+	
+	// exposes our artist
+	public Set<String> getArtist() {
+		return byArtist().keySet();
+	}
+	
+	// exposes our songs 
+	public List<Song> getSongsForArtist(String artistName) {
+		return byArtist().get(artistName);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

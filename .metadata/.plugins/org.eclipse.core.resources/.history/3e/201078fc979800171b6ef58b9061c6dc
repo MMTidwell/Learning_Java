@@ -1,9 +1,8 @@
 package Model;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.io.*;
@@ -94,17 +93,7 @@ class SongBook {
 	
 	// exposes our songs 
 	public List<Song> getSongsForArtist(String artistName) {
-		List<Song> songs = byArtist().get(artistName);
-		songs.sort(new Comparator<Song>(){
-			@Override
-			public int compare(Song song1, Song song2) {
-				if (song1.equals(song2)) {
-					return 0;
-				}
-				return song1.mTitle.compareTo(song2.mTitle);
-			}
-		});
-		return songs;
+		return byArtist().get(artistName);
 	}
 }
 

@@ -1,14 +1,15 @@
 package Model;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 import java.util.Map;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
-class SongBook {
+public class SongBook {
 	// Song is not part of the imported util package, but actually the Song class
 	private List<Song> mSongs;
 	
@@ -20,46 +21,25 @@ class SongBook {
 	// writes out song using a custom serialization
 	// This will export our SongBook
 	public void exportTo(String fileName) {
-		try (
-			// This will create a new file
-			FileOutputStream fos = new FileOutputStream(fileName);
-			// Creates a new writer
+		try (FileOutputStream fos = new FileOutputStream(fileName);
 			PrintWriter writer =  new PrintWriter(fos);
 		) {
-			// loops all the song
 			for (Song song:mSongs) {
-				// this will print to the file
-				writer.printf("#%s|%s|%s%n", 
-						song.getArtist(), 
-						song.getTitle(), 
-						song.getVideoUrl());
+				writer.printf("#%s|%s|%s%n", song.getArtist(), song.getTitle(), song.getVideoUrl());
 			}
 		} catch (IOException ioe) {
-			// this results when there is a porblem with saving the fileName
 			System.out.printf("Problem saving %s%n", fileName);
-			// prints out the Stack Trace Error
 			ioe.printStackTrace();
 		}
 	}
 	
-	// Allows SongBook to be loaded from a file
 	public void improtFrom(String fileName) {
-		try (
-			// this will grab the file that is called
-			FileInputStream fis = new FileInputStream(fileName);
-			// this read the file that was called
-			BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
-		) {
-			// read line by line
-			String line;
-			while ((line = reader.readLine()) != null) {
-				// returns a array of strings
-				String[] args = line.split("\\|");
-				addSong(new Song(args[0], args[1], args[2]));
-			}
-		} catch (IOException ioe) {
-			System.out.printf("Problems loading %s%n", fileName);
-			ioe.printStackTrace();
+		try (FileInputStream fis = new FileInputStream(fileName);
+			BufferedFreader reader = new BufferedReader(new InputStreamReader(fis));
+				) {
+			
+		} catch () {
+			
 		}
 	}
 	
@@ -75,7 +55,7 @@ class SongBook {
 	
 	// gets artist and song
 	private Map<String, List<Song>> byArtist() {
-		Map<String, List<Song>> byArtist = new TreeMap<>();
+		Map<String, List<Song>> byArtist = new HashMap<>();
 		for (Song song:mSongs) {
 			List<Song> artistSongs = byArtist.get(song.getArtist());
 			if (artistSongs == null) {
@@ -94,17 +74,7 @@ class SongBook {
 	
 	// exposes our songs 
 	public List<Song> getSongsForArtist(String artistName) {
-		List<Song> songs = byArtist().get(artistName);
-		songs.sort(new Comparator<Song>(){
-			@Override
-			public int compare(Song song1, Song song2) {
-				if (song1.equals(song2)) {
-					return 0;
-				}
-				return song1.mTitle.compareTo(song2.mTitle);
-			}
-		});
-		return songs;
+		return byArtist().get(artistName);
 	}
 }
 

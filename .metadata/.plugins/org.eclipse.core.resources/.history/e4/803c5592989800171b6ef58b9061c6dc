@@ -98,13 +98,9 @@ class SongBook {
 		songs.sort(new Comparator<Song>(){
 			@Override
 			public int compare(Song song1, Song song2) {
-				if (song1.equals(song2)) {
-					return 0;
-				}
-				return song1.mTitle.compareTo(song2.mTitle);
+				
 			}
 		});
-		return songs;
 	}
 }
 

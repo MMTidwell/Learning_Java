@@ -2,8 +2,8 @@ package Model;
 
 public class Song {
 	// first step of the model, we are finding what will be needed for each song
-	protected String mArtist;
-	protected String mTitle;
+	private String mArtist;
+	private String mTitle;
 	protected String mVideoUrl;
 	
 	// constructor 
