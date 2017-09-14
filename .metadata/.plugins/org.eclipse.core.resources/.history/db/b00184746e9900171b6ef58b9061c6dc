@@ -1,0 +1,11 @@
+/*
+ * JVM related things
+ */
+package com.treehouse;
+
+public class Systemizer {
+	public static void main(String[] args) {
+		System.out.printf("This is the classpath:  %s%n", 
+				System.getProperty("java.class.path"));
+	}
+}
