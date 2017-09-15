@@ -1,0 +1,17 @@
+// allow repositories to be grouped together
+group 'com.spring'
+version '1.0-SNAPSHOT'
+
+// tells gradle to add predefined functionality when building our project
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+// Where the libraries are listed
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
