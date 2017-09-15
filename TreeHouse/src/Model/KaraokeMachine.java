@@ -22,7 +22,7 @@ import java.util.Queue;
 public class KaraokeMachine {	
 	private SongBook mSongBook;
 	private BufferedReader mReader;
-	private Queue<Song> mSongQueue;
+	private Queue<Song> mSongRequestQueue;
 	private Map<String, String> mMenu;
 
 	// constructor 
@@ -30,7 +30,7 @@ public class KaraokeMachine {
 		mSongBook = songBook;
 		// this is going to read from the console
 		mReader = new BufferedReader(new InputStreamReader(System.in));
-		mSongQueue = new ArrayDeque<Song>();
+		mSongRequestQueue = new ArrayDeque<Song>();
 		mMenu = new HashMap<String, String>();
 		
 		// adds to the mMenu variable
@@ -55,7 +55,7 @@ public class KaraokeMachine {
 					case "choose" :
 						String artist = promptArtist();
 						Song artistSong = promptSongForArtist(artist);
-						mSongQueue.add(artistSong);
+						mSongRequestQueue.add(artistSong);
 						System.out.printf("You chose: %s%n", artistSong);
 						break;
 					case "play" :
@@ -83,13 +83,13 @@ public class KaraokeMachine {
 	}
 	
 	/*
-	 * thows IOException - is taking place of the try/catch portion of the method
+	 * throws IOException - is taking place of the try/catch portion of the method
 	 * This ability is added in via import java.io.IOException
 	 */
 	private String promptAction() throws IOException {
 		System.out.printf("There are %d songs available and %d in the queue. %n Your options are: %n",
 				mSongBook.getSongCount(),
-				mSongQueue.size());
+				mSongRequestQueue.size());
 		// loops through the mMenu variable, prints out each key/value pairs
 		for (Map.Entry<String, String> option : mMenu.entrySet()) {
 			System.out.printf("%s - %s %n",
@@ -142,7 +142,7 @@ public class KaraokeMachine {
 	
 	//
 	public void playNext() {
-		Song song = mSongQueue.poll();
+		Song song = mSongRequestQueue.poll();
 		if (song == null) {
 			System.out.println("Sorry there are no songs on the queue. Use choose from the menu to add some!");
 		} else {

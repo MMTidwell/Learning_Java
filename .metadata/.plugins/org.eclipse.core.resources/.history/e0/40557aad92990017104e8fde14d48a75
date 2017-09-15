@@ -1,0 +1,15 @@
+package Model;
+
+import java.io.BufferedReader;
+import java.util.Map;
+import java.util.Queue;
+
+public class KaraokeMachineData {
+	public SongBook mSongBook;
+	public BufferedReader mReader;
+	public Queue<Song> mSongQueue;
+	public Map<String, String> mMenu;
+
+	public KaraokeMachineData() {
+	}
+}

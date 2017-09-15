@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="methodName" key="selection"/>
+		<item value="read" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="read"/>
 			<item value="methodName"/>
 			<item value="treet"/>
 			<item value="treets"/>
@@ -15,7 +16,6 @@
 			<item value="Character"/>
 			<item value="appyGuess"/>
 			<item value="swapHead"/>
-			<item value="toLowerCase"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="265" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
 		<item value="399" key="DIALOG_HEIGHT"/>
-		<item value="567" key="DIALOG_X_ORIGIN"/>
-		<item value="137" key="DIALOG_Y_ORIGIN"/>
+		<item value="673" key="DIALOG_X_ORIGIN"/>
+		<item value="185" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

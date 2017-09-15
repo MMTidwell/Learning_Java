@@ -1,0 +1,21 @@
+package Model;
+
+public class SongRequest {
+	private String mSingerName;
+	private Song mSong;
+	
+	public SongRequest(String singerName, Song song) {
+		setmSingerName(singerName);
+		mSong = song;
+	}
+
+	public String getSingerName() {
+		return mSingerName;
+	}
+
+	public void setmSingerName(String mSingerName) {
+		this.mSingerName = mSingerName;
+	}
+
+	
+}
